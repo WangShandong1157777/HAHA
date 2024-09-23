@@ -26,7 +26,7 @@ def get_parser(**parser_kwargs):
         "-b",
         "--base",
         nargs="*",
-        metavar="base_config.yaml",
+        metavar="gaussians_docker_female3.yaml",
         help="Paths to base configs. Loaded from left-to-right. "
              "Parameters can be overwritten or added with command-line options of the form `--key value`.",
         default=list(),

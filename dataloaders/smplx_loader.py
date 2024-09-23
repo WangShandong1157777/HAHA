@@ -31,7 +31,7 @@ class DataLoader(torch.utils.data.Dataset):
     ):
         self._images_path = os.path.join(data_root, "images")
         self._masks_path = os.path.join(data_root, "masks")
-        self._smplx_path = os.path.join(data_root, "smplx/results")
+        self._smplx_path = os.path.join(data_root, "smplx_finetune/results")
         self._render_size = render_size
 
         # Get images list
@@ -45,6 +45,7 @@ class DataLoader(torch.utils.data.Dataset):
         self._data_hash = {}
 
         self.sequence_name = data_root.split('/')[-1].split('-test')[0]
+
 
     def load_sample(self, pid):
         rgb_image = cv2.imread(os.path.join(self._images_path, pid + ".png"))[..., ::-1]

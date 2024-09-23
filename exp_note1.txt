@@ -1,0 +1,280 @@
+/home/ilc/anaconda3/envs/haha/bin/python /home/ilc/wsd_data/github_code/HAHA/main.py --base=./configs/gaussians_docker_female3.yaml
+/home/ilc/anaconda3/envs/haha/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/home/ilc/anaconda3/envs/haha/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+/home/ilc/wsd_data/github_code/HAHA/runners/train_gaussians.py:201: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  self._gaussian_to_face = torch.nn.Parameter(torch.range(0, npoints - 1, dtype=torch.long, device=self.device),
+/home/ilc/anaconda3/envs/haha/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: /home/ilc/anaconda3/envs/haha/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+Training samples: 112
+Validation samples: 13
+Trainable pose parameters: 449
+**********
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0489:   0%|          | 0/3000 [00:01<?, ?it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]/home/ilc/wsd_data/github_code/HAHA/callbacks/image_logger.py:26: RuntimeWarning: divide by zero encountered in divide
+  grid = (grid - min_v) / (max_v - min_v)
+/home/ilc/wsd_data/github_code/HAHA/callbacks/image_logger.py:26: RuntimeWarning: invalid value encountered in divide
+  grid = (grid - min_v) / (max_v - min_v)
+
+  8%|▊         | 1/13 [00:01<00:17,  1.47s/it]
+ 15%|█▌        | 2/13 [00:01<00:09,  1.14it/s]
+ 23%|██▎       | 3/13 [00:02<00:06,  1.52it/s]
+ 31%|███       | 4/13 [00:02<00:05,  1.79it/s]
+ 38%|███▊      | 5/13 [00:03<00:03,  2.00it/s]
+ 46%|████▌     | 6/13 [00:03<00:03,  2.18it/s]
+ 54%|█████▍    | 7/13 [00:03<00:02,  2.34it/s]
+ 62%|██████▏   | 8/13 [00:04<00:02,  2.45it/s]
+ 69%|██████▉   | 9/13 [00:04<00:01,  2.51it/s]
+ 77%|███████▋  | 10/13 [00:04<00:01,  2.55it/s]
+ 85%|████████▍ | 11/13 [00:05<00:00,  2.59it/s]
+ 92%|█████████▏| 12/13 [00:05<00:00,  2.63it/s]
+psnr : 16.515707089350773
+100%|██████████| 13/13 [00:06<00:00,  2.16it/s]
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0153:  10%|█         | 300/3000 [00:32<03:52, 11.59it/s]Number of Gaussians: 29636
+Clonned: 0 Splitted: 8728
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0169:  17%|█▋        | 502/3000 [00:50<03:42, 11.22it/s]Number of Gaussians: 37704
+Clonned: 0 Splitted: 8068
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0072:  23%|██▎       | 703/3000 [01:08<03:24, 11.24it/s]Number of Gaussians: 46184
+Clonned: 1 Splitted: 8479
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0088:  30%|███       | 903/3000 [01:27<03:01, 11.53it/s]Number of Gaussians: 55253
+Clonned: 302 Splitted: 8767
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0077:  33%|███▎      | 1000/3000 [01:36<03:03, 10.88it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:17,  1.47s/it]
+ 15%|█▌        | 2/13 [00:01<00:09,  1.13it/s]
+ 23%|██▎       | 3/13 [00:02<00:06,  1.48it/s]
+ 31%|███       | 4/13 [00:02<00:05,  1.73it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.91it/s]
+ 46%|████▌     | 6/13 [00:03<00:03,  2.07it/s]
+ 54%|█████▍    | 7/13 [00:04<00:02,  2.20it/s]
+ 62%|██████▏   | 8/13 [00:04<00:02,  2.30it/s]
+ 69%|██████▉   | 9/13 [00:04<00:01,  2.37it/s]
+ 77%|███████▋  | 10/13 [00:05<00:01,  2.40it/s]
+ 85%|████████▍ | 11/13 [00:05<00:00,  2.43it/s]
+ 92%|█████████▏| 12/13 [00:06<00:00,  2.44it/s]
+100%|██████████| 13/13 [00:06<00:00,  2.06it/s]
+psnr : 22.579784393310547
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0087:  37%|███▋      | 1105/3000 [01:52<02:53, 10.90it/s]Number of Gaussians: 63701
+Clonned: 1223 Splitted: 7225
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0208:  44%|████▎     | 1306/3000 [02:12<02:44, 10.30it/s]Number of Gaussians: 72483
+Clonned: 3014 Splitted: 5768
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0089:  50%|█████     | 1507/3000 [02:34<02:36,  9.52it/s]Number of Gaussians: 81065
+Clonned: 3896 Splitted: 4686
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0074:  57%|█████▋    | 1708/3000 [02:56<02:21,  9.10it/s]Number of Gaussians: 88388
+Clonned: 3907 Splitted: 3416
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0080:  64%|██████▎   | 1909/3000 [03:19<02:11,  8.32it/s]Number of Gaussians: 95006
+Clonned: 3288 Splitted: 3330
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0060:  67%|██████▋   | 2000/3000 [03:30<01:51,  9.01it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:18,  1.51s/it]
+ 15%|█▌        | 2/13 [00:02<00:10,  1.07it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.35it/s]
+ 31%|███       | 4/13 [00:03<00:05,  1.54it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.68it/s]
+ 46%|████▌     | 6/13 [00:04<00:03,  1.78it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.85it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.91it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.93it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.95it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.97it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.97it/s]
+psnr : 22.50988945594201
+100%|██████████| 13/13 [00:07<00:00,  1.75it/s]
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0085:  70%|███████   | 2110/3000 [03:50<01:40,  8.89it/s]Number of Gaussians: 101691
+Clonned: 3475 Splitted: 3210
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0068:  77%|███████▋  | 2311/3000 [04:13<01:18,  8.77it/s]Number of Gaussians: 106401
+Clonned: 2213 Splitted: 2497
+TrainingStage.OPTIMIZE_GAUSSIANS. Loss 0.0065: 100%|██████████| 3000/3000 [05:36<00:00,  8.90it/s]
+100%|██████████| 13/13 [00:07<00:00,  1.72it/s]
+psnr : 22.522303801316482
+Trainable pose parameters: 449
+**********
+TrainingStage.FINETUNE_TEXTURE. Loss 0.0231:   0%|          | 0/2500 [00:00<?, ?it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:13,  1.12s/it]
+ 15%|█▌        | 2/13 [00:01<00:07,  1.39it/s]
+ 23%|██▎       | 3/13 [00:01<00:05,  1.73it/s]
+ 31%|███       | 4/13 [00:02<00:04,  2.13it/s]
+ 38%|███▊      | 5/13 [00:02<00:03,  2.46it/s]
+ 46%|████▌     | 6/13 [00:02<00:02,  2.78it/s]
+ 54%|█████▍    | 7/13 [00:03<00:01,  3.02it/s]
+ 62%|██████▏   | 8/13 [00:03<00:01,  3.22it/s]
+ 69%|██████▉   | 9/13 [00:03<00:01,  3.36it/s]
+ 77%|███████▋  | 10/13 [00:03<00:00,  3.46it/s]
+ 85%|████████▍ | 11/13 [00:04<00:00,  3.53it/s]
+ 92%|█████████▏| 12/13 [00:04<00:00,  3.55it/s]
+psnr : 15.071312317481407
+100%|██████████| 13/13 [00:04<00:00,  2.78it/s]
+TrainingStage.FINETUNE_TEXTURE. Loss 0.0037:  40%|███▉      | 999/2500 [01:15<01:38, 15.17it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:14,  1.23s/it]
+ 15%|█▌        | 2/13 [00:01<00:08,  1.32it/s]
+ 23%|██▎       | 3/13 [00:02<00:05,  1.71it/s]
+ 31%|███       | 4/13 [00:02<00:04,  2.11it/s]
+ 38%|███▊      | 5/13 [00:02<00:03,  2.43it/s]
+ 46%|████▌     | 6/13 [00:02<00:02,  2.76it/s]
+ 54%|█████▍    | 7/13 [00:03<00:01,  3.02it/s]
+ 62%|██████▏   | 8/13 [00:03<00:01,  3.23it/s]
+ 69%|██████▉   | 9/13 [00:03<00:01,  3.35it/s]
+ 77%|███████▋  | 10/13 [00:03<00:00,  3.46it/s]
+ 85%|████████▍ | 11/13 [00:04<00:00,  3.54it/s]
+ 92%|█████████▏| 12/13 [00:04<00:00,  3.56it/s]
+psnr : 18.07736924978403
+100%|██████████| 13/13 [00:04<00:00,  2.75it/s]
+TrainingStage.FINETUNE_TEXTURE. Loss 0.0033:  80%|███████▉  | 1999/2500 [02:29<00:33, 15.16it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:14,  1.17s/it]
+ 15%|█▌        | 2/13 [00:01<00:08,  1.36it/s]
+ 23%|██▎       | 3/13 [00:01<00:05,  1.74it/s]
+ 31%|███       | 4/13 [00:02<00:04,  2.15it/s]
+ 38%|███▊      | 5/13 [00:02<00:03,  2.48it/s]
+ 46%|████▌     | 6/13 [00:02<00:02,  2.80it/s]
+ 54%|█████▍    | 7/13 [00:03<00:01,  3.05it/s]
+ 62%|██████▏   | 8/13 [00:03<00:01,  3.25it/s]
+ 69%|██████▉   | 9/13 [00:03<00:01,  3.39it/s]
+ 77%|███████▋  | 10/13 [00:03<00:00,  3.49it/s]
+ 85%|████████▍ | 11/13 [00:04<00:00,  3.56it/s]
+ 92%|█████████▏| 12/13 [00:04<00:00,  3.61it/s]
+100%|██████████| 13/13 [00:04<00:00,  2.79it/s]
+psnr : 18.075744775625374
+TrainingStage.FINETUNE_TEXTURE. Loss 0.0037: 100%|██████████| 2500/2500 [03:08<00:00, 13.23it/s]
+100%|██████████| 13/13 [00:04<00:00,  2.78it/s]
+psnr : 18.07297002352201
+Trainable pose parameters: 449
+**********
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0137:   4%|▍         | 201/5000 [00:23<09:20,  8.57it/s]Number of Gaussians: 106401
+Prunned: 0
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0091:   8%|▊         | 402/5000 [00:47<09:10,  8.36it/s]Number of Gaussians: 106401
+Prunned: 0
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0104:  10%|█         | 500/5000 [00:59<08:39,  8.66it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:17,  1.50s/it]
+ 15%|█▌        | 2/13 [00:02<00:10,  1.07it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.34it/s]
+ 31%|███       | 4/13 [00:03<00:05,  1.52it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.63it/s]
+ 46%|████▌     | 6/13 [00:04<00:04,  1.71it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.78it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.83it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.86it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.88it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.89it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.90it/s]
+psnr : 22.370247180645283
+100%|██████████| 13/13 [00:07<00:00,  1.70it/s]
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0110:  12%|█▏        | 603/5000 [01:19<08:52,  8.26it/s]Number of Gaussians: 106396
+Prunned: 5
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0113:  16%|█▌        | 804/5000 [01:43<08:28,  8.25it/s]Number of Gaussians: 106359
+Prunned: 37
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0079:  20%|██        | 1005/5000 [02:07<07:46,  8.57it/s]Number of Gaussians: 106287
+Prunned: 72
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0089:  24%|██▍       | 1206/5000 [02:30<07:24,  8.53it/s]Number of Gaussians: 106117
+Prunned: 170
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0125:  28%|██▊       | 1407/5000 [02:54<07:09,  8.36it/s]Number of Gaussians: 105888
+Prunned: 229
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0102:  30%|███       | 1500/5000 [03:06<06:56,  8.40it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:17,  1.49s/it]
+ 15%|█▌        | 2/13 [00:02<00:10,  1.07it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.34it/s]
+ 31%|███       | 4/13 [00:03<00:05,  1.52it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.64it/s]
+ 46%|████▌     | 6/13 [00:04<00:04,  1.72it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.79it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.84it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.87it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.88it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.90it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.90it/s]
+psnr : 22.378061441274788
+100%|██████████| 13/13 [00:07<00:00,  1.71it/s]
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0126:  32%|███▏      | 1608/5000 [03:26<06:35,  8.58it/s]Number of Gaussians: 105591
+Prunned: 297
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0069:  36%|███▌      | 1809/5000 [03:50<09:34,  5.56it/s]Number of Gaussians: 105225
+Prunned: 366
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0100:  40%|████      | 2010/5000 [04:13<05:44,  8.69it/s]Number of Gaussians: 104778
+Prunned: 447
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0109:  44%|████▍     | 2211/5000 [04:37<05:23,  8.63it/s]Number of Gaussians: 104290
+Prunned: 488
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0100:  48%|████▊     | 2412/5000 [05:01<04:57,  8.69it/s]Number of Gaussians: 103747
+Prunned: 543
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0064:  50%|█████     | 2500/5000 [05:11<04:46,  8.72it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:17,  1.43s/it]
+ 15%|█▌        | 2/13 [00:01<00:09,  1.11it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.37it/s]
+ 31%|███       | 4/13 [00:03<00:05,  1.54it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.65it/s]
+ 46%|████▌     | 6/13 [00:04<00:04,  1.74it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.78it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.83it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.86it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.88it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.89it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.90it/s]
+100%|██████████| 13/13 [00:07<00:00,  1.72it/s]
+psnr : 22.399848057673527
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0097:  52%|█████▏    | 2613/5000 [05:32<04:38,  8.57it/s]Number of Gaussians: 103180
+Prunned: 567
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0087:  56%|█████▋    | 2814/5000 [05:56<04:09,  8.75it/s]Number of Gaussians: 102530
+Prunned: 650
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0094:  60%|██████    | 3015/5000 [06:19<03:48,  8.70it/s]Number of Gaussians: 101792
+Prunned: 738
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0115:  64%|██████▍   | 3216/5000 [06:43<03:25,  8.68it/s]Number of Gaussians: 101034
+Prunned: 758
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0100:  68%|██████▊   | 3417/5000 [07:06<03:01,  8.72it/s]Number of Gaussians: 100290
+Prunned: 744
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0145:  70%|███████   | 3500/5000 [07:16<02:46,  8.99it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:18,  1.51s/it]
+ 15%|█▌        | 2/13 [00:02<00:10,  1.06it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.34it/s]
+ 31%|███       | 4/13 [00:03<00:05,  1.53it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.64it/s]
+ 46%|████▌     | 6/13 [00:04<00:04,  1.74it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.80it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.86it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.89it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.90it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.91it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.91it/s]
+100%|██████████| 13/13 [00:07<00:00,  1.71it/s]
+psnr : 22.424578006450947
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0079:  72%|███████▏  | 3618/5000 [07:37<03:43,  6.17it/s]Number of Gaussians: 99498
+Prunned: 792
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0079:  76%|███████▋  | 3819/5000 [08:01<02:14,  8.80it/s]Number of Gaussians: 98798
+Prunned: 700
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0084:  80%|████████  | 4020/5000 [08:24<01:51,  8.80it/s]Number of Gaussians: 98086
+Prunned: 712
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0093:  84%|████████▍ | 4221/5000 [08:47<01:27,  8.87it/s]Number of Gaussians: 97286
+Prunned: 800
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0084:  88%|████████▊ | 4422/5000 [09:10<01:05,  8.76it/s]Number of Gaussians: 96510
+Prunned: 776
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0113:  90%|█████████ | 4500/5000 [09:19<00:55,  8.94it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]
+  8%|▊         | 1/13 [00:01<00:17,  1.45s/it]
+ 15%|█▌        | 2/13 [00:01<00:09,  1.10it/s]
+ 23%|██▎       | 3/13 [00:02<00:07,  1.38it/s]
+ 31%|███       | 4/13 [00:02<00:05,  1.56it/s]
+ 38%|███▊      | 5/13 [00:03<00:04,  1.68it/s]
+ 46%|████▌     | 6/13 [00:04<00:03,  1.77it/s]
+ 54%|█████▍    | 7/13 [00:04<00:03,  1.84it/s]
+ 62%|██████▏   | 8/13 [00:05<00:02,  1.89it/s]
+ 69%|██████▉   | 9/13 [00:05<00:02,  1.92it/s]
+ 77%|███████▋  | 10/13 [00:06<00:01,  1.94it/s]
+ 85%|████████▍ | 11/13 [00:06<00:01,  1.95it/s]
+ 92%|█████████▏| 12/13 [00:07<00:00,  1.95it/s]
+psnr : 22.425820130568283
+100%|██████████| 13/13 [00:07<00:00,  1.75it/s]
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0085:  92%|█████████▏| 4623/5000 [09:41<00:42,  8.90it/s]Number of Gaussians: 95614
+Prunned: 896
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0100:  96%|█████████▋| 4824/5000 [10:04<00:19,  8.89it/s]Number of Gaussians: 94645
+Prunned: 969
+TrainingStage.OPTIMIZE_OPACITY. Loss 0.0120: 100%|██████████| 5000/5000 [10:24<00:00,  8.01it/s]
+100%|██████████| 13/13 [00:07<00:00,  1.75it/s]
+psnr : 22.427940075214092
+
+Process finished with exit code 0

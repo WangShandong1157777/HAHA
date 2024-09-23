@@ -657,6 +657,22 @@ class TextureAndGaussianTrainer(nn.Module):
             data_dict["rasterization"] = data_dict["gaussian_rasterization"]
             data_dict["merged_mask"] = data_dict["gaussian_alpha"]
 
+            # debug:vis
+            # cv2.namedWindow('gt', 0)
+            # cv2.namedWindow('render', 0)
+            # gt = data_dict['rgb_image'][0]
+            # gt2 = gt.permute([1, 2, 0])
+            # gt2 = gt2[:, :, [2, 1, 0]]
+            # gt2 = (gt2.clamp(0, 1) * 255).detach().cpu().numpy().astype(np.uint8)
+            # cv2.imshow("gt", gt2)
+            # render = data_dict['rasterization'][0]
+            # render = render.permute([1, 2, 0])
+            # render = render[:, :, [2, 1, 0]]
+            # render = (render.clamp(0, 1) * 255).detach().cpu().numpy().astype(np.uint8)
+            # cv2.imshow("render", render)
+            # cv2.waitKey(1)
+
+
         elif training_stage == TrainingStage.FINETUNE_TEXTURE:
             # Train only texture
             data_dict["rasterization"] = data_dict["mesh_rasterization"]
